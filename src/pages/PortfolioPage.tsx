@@ -52,7 +52,6 @@ export default function PortfolioPage() {
           <p className="pf-hero-desc">{t.heroDesc}</p>
         </div>
       </section>
-
       <section id="skills" className="pf-section">
         <h2 className="pf-h2">{t.skillsTitle}<em>.</em></h2>
         <div className="pf-skill-groups">
@@ -165,7 +164,7 @@ export default function PortfolioPage() {
             <span className="pf-cicon">@</span>
             luccaspino@icloud.com
           </a>
-          <a href="https://www.linkedin.com/in/luccas-pino-12430a268/" target="_blank" rel="noopener noreferrer" className="pf-clink">
+          <a href="https://www.linkedin.com/in/luccas-pino" target="_blank" rel="noopener noreferrer" className="pf-clink">
             <span className="pf-cicon">in</span>
             LinkedIn
           </a>
