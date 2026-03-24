@@ -25,6 +25,7 @@ export interface ExperienceItem {
   company: string;
   role: string;
   period: string;
+  location?: string;
   bullets: string[];
 }
 
@@ -163,6 +164,7 @@ export const EXP: Record<Lang, ExperienceItem[]> = {
       company: "RSE - Gerenciamento de Risco e Sustentabilidade",
       role: "Estagiário de Engenharia de Software",
       period: "Mar 2024 - Mar 2026",
+      location: "Remoto",
       bullets: [
         "Automação de Processos: Desenvolvi fluxos automatizados utilizando Python para integração de dados e suporte à decisão, impactando e otimizando as operações de 86% dos setores da empresa.",
         "Desenvolvimento de Sistemas: Projetei e implementei o portal interno e aplicativos de gestão de projetos (Logística e Reembolso) com Node.js e TypeScript, resultando em um ganho de 66% na eficiência dos fluxos ao unificar processos.",
@@ -177,6 +179,7 @@ export const EXP: Record<Lang, ExperienceItem[]> = {
       company: "RSE - Risk and Sustainability Management",
       role: "Software Engineering Intern",
       period: "Mar 2024 - Mar 2026",
+      location: "Remote",
       bullets: [
         "Process Automation: Developed automated workflows using Python for data integration and decision support, impacting and optimizing operations across 86% of the company's departments.",
         "Systems Development: Designed and implemented the internal portal and project management applications (Logistics and Reimbursement) with Node.js and TypeScript, resulting in a 66% efficiency gain in workflows by unifying processes.",

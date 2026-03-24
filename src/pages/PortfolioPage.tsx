@@ -76,7 +76,10 @@ export default function PortfolioPage() {
             <div key={exp.company} className="pf-exp-card">
               <div className="pf-exp-top">
                 <span className="pf-exp-co">{exp.company}</span>
-                <span className="pf-exp-period">{exp.period}</span>
+                <span className="pf-exp-period">
+                  {exp.period}
+                  {exp.location ? ` · ${exp.location}` : ""}
+                </span>
               </div>
               <p className="pf-exp-role">{exp.role}</p>
               <ul className="pf-exp-bul">
