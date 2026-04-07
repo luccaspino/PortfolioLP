@@ -15,10 +15,12 @@ export interface Project {
   num: string;
   tag: string;
   tagClr: string;
+  tags?: string[];
+  tagsClr?: string[];
   subtitle: Record<Lang, string>;
   desc: Record<Lang, string>;
   stack: string[];
-  links: Array<[string, string]>;
+  links: [string, string][];
 }
 
 export interface ExperienceItem {
@@ -90,18 +92,20 @@ export const SKILL_GROUPS: SkillGroup[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: "etlboxd",
-    title: "ETLBOXD",
+    id: "etlboxdv2",
+    title: "ETLBOXDv2",
     num: "01",
-    tag: "Data Eng.",
+    tag: "Eng. Dados",
     tagClr: "#10b981",
-    subtitle: { pt: "Pipeline ETL pessoal", en: "Personal ETL pipeline" },
+    tags: ["Eng. Dados", "Full stack"],
+    tagsClr: ["#10b981", "#60a5fa"],
+    subtitle: { pt: "Plataforma de ETL e Analytics", en: "ETL and Analytics platform" },
     desc: {
-      pt: "Pipeline ETL que extrai dados do Letterboxd e os enriquece via TMDB API. Dashboard analítico no Power BI com métricas cinematográficas.",
-      en: "ETL pipeline extracting Letterboxd data enriched via the TMDB API. Analytical Power BI dashboard with film metrics.",
+      pt: "Plataforma fullstack para ETL e analytics do Letterboxd com Streamlit, FastAPI e PostgreSQL. Inclui ingestão e enriquecimento em Python com scraping (BeautifulSoup/httpx), validação de ZIP, regras de consistência para evitar cargas parciais, APIs analíticas, cache no dashboard e testes automatizados com pytest.",
+      en: "Fullstack Letterboxd ETL and analytics platform using Streamlit, FastAPI and PostgreSQL. It includes Python ingestion and enrichment with scraping (BeautifulSoup/httpx), ZIP validation, consistency rules to prevent partial loads, analytical APIs, dashboard caching and automated tests with pytest.",
     },
-    stack: ["Python", "Pandas", "TMDB API", "Power BI", "PostgreSQL"],
-    links: [["GitHub", "https://github.com/luccaspino/ETLBOXD"]],
+    stack: ["Python", "FastAPI", "Streamlit", "PostgreSQL", "BeautifulSoup", "httpx", "pytest"],
+    links: [["GitHub", "https://github.com/luccaspino/ETLBOXDv2"], ["Site", "https://etlboxd.streamlit.app"]],
   },
   {
     id: "gameboxd",

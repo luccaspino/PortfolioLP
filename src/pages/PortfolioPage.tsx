@@ -121,10 +121,18 @@ export default function PortfolioPage() {
               <div className="pf-card-inner">
                 <div className="pf-card-f">
                   <p className="pf-card-num">{p.num}</p>
-                  <span
-                    className="pf-card-tag"
-                    style={{ background: `${p.tagClr}18`, color: p.tagClr }}
-                  >{p.tag}</span>
+                  <div className="pf-card-tags-wrapper">
+                    {(p.tags || [p.tag]).map((t, idx) => {
+                      const color = p.tagsClr ? (p.tagsClr[idx] || p.tagClr) : p.tagClr;
+                      return (
+                        <span
+                          key={t}
+                          className="pf-card-tag"
+                          style={{ background: `${color}18`, color }}
+                        >{t}</span>
+                      );
+                    })}
+                  </div>
                   <h3 className="pf-card-title">{p.title}</h3>
                   <p className="pf-card-sub">{p.subtitle[lang]}</p>
                   <span className="pf-card-hint">{t.flipHint} ›</span>

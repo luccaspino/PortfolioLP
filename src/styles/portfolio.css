@@ -156,10 +156,12 @@
   font-family: var(--ff-mono); font-size: 0.65rem; color: var(--muted);
   margin-bottom: 20px; letter-spacing: 0.06em;
 }
+.pf-card-tags-wrapper {
+  display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; justify-content: center;
+}
 .pf-card-tag {
   display: inline-block; padding: 3px 10px; border-radius: 4px;
   font-family: var(--ff-mono); font-size: 0.65rem; font-weight: 500;
-  margin-bottom: 12px;
 }
 .pf-card-title { font-family: var(--ff-head); font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
 .pf-card-sub { font-size: 0.825rem; color: #dbe6f5; }
